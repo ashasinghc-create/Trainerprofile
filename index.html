@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asha C. Devi · Trainer Profile</title>
+  <meta name="description" content="Asha C. Devi, Founder &amp; Lead Consultant, Metanoia Mindcraft Consultants. Corporate trainer in leadership development, workplace communication and capability development.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --violet: #9370db;
+      --orchid: #ba55d3;
+      --thistle: #d8bfd8;
+      --gold: #f2b84b;
+      --text: #f5f5f7;
+      --muted: #d1d1d6;
+      --dim: #9a9aa3;
+      --glass: rgba(255, 255, 255, 0.05);
+      --glass-hover: rgba(255, 255, 255, 0.08);
+      --line: rgba(255, 255, 255, 0.1);
+      --ease: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @keyframes gradientShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(-45deg, #2d1b4e, #4a1c5e, #1a1a2e, #2d3561, #4a1c5e);
+      background-color: #2d1b4e;
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.6;
+      position: relative;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at top left, rgba(147, 112, 219, 0.3), transparent 50%),
+        radial-gradient(ellipse at bottom right, rgba(186, 85, 211, 0.3), transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    body > * { position: relative; z-index: 1; }
+
+    a { color: var(--orchid); text-decoration: none; transition: color 0.3s; }
+    a:hover { color: #fff; }
+    strong { color: #fff; font-weight: 600; }
+
+    /* ---------- Top nav ---------- */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      background: rgba(26, 26, 46, 0.55);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .nav-brand { font-weight: 700; color: #fff; white-space: nowrap; letter-spacing: 0.02em; }
+    .nav-links { display: flex; gap: 20px; overflow-x: auto; scrollbar-width: none; margin-left: auto; }
+    .nav-links::-webkit-scrollbar { display: none; }
+    .nav-links a { color: var(--muted); font-size: 0.9rem; white-space: nowrap; }
+    .nav-links a:hover { color: #fff; }
+
+    /* ---------- Hero ---------- */
+    .hero-section {
+      min-height: 88vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+      background: radial-gradient(ellipse at top, rgba(74, 28, 94, 0.5) 0%, transparent 70%);
+    }
+    .profile-container { text-align: center; max-width: 900px; animation: fadeInUp 1s ease-out; }
+    .eyebrow {
+      font-size: 0.85rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 26px;
+      animation: fadeInUp 1s ease-out 0.1s both;
+    }
+    .profile-img {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      margin: 0 auto 26px;
+      padding: 4px;
+      background: linear-gradient(135deg, var(--violet) 0%, var(--orchid) 60%, var(--gold) 100%);
+      box-shadow: 0 20px 60px rgba(147, 112, 219, 0.5);
+      transition: transform 0.4s var(--ease);
+    }
+    .profile-img img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block; }
+    .profile-img:hover { transform: scale(1.05); }
+
+    .name {
+      font-size: 3.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+      background: linear-gradient(90deg, #ffffff 0%, var(--thistle) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeInUp 1s ease-out 0.2s both;
+    }
+    .role { font-size: 1.15rem; color: #fff; font-weight: 500; margin-bottom: 6px; animation: fadeInUp 1s ease-out 0.25s both; }
+    .tagline {
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--thistle);
+      margin-bottom: 22px;
+      animation: fadeInUp 1s ease-out 0.3s both;
+    }
+    .mantra {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.4;
+      margin-bottom: 18px;
+      animation: fadeInUp 1s ease-out 0.35s both;
+    }
+    .mantra span { color: var(--orchid); }
+    .hero-intro { color: var(--muted); max-width: 640px; margin: 0 auto 26px; animation: fadeInUp 1s ease-out 0.4s both; }
+
+    .contact-info {
+      display: flex;
+      gap: 25px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+      animation: fadeInUp 1s ease-out 0.45s both;
+    }
+    .contact-item { font-size: 0.95rem; color: var(--muted); }
+
+    .badges { animation: fadeInUp 1s ease-out 0.5s both; }
+    .achievement-badge {
+      display: inline-block;
+      background: rgba(186, 85, 211, 0.2);
+      border: 1px solid rgba(186, 85, 211, 0.4);
+      padding: 5px 15px;
+      border-radius: 15px;
+      font-size: 0.85rem;
+      color: var(--thistle);
+      margin: 0 5px 8px;
+    }
+
+    .cta-row { margin-top: 26px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; animation: fadeInUp 1s ease-out 0.55s both; }
+    .btn {
+      display: inline-block;
+      padding: 12px 26px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.3s var(--ease);
+    }
+    .btn-primary { background: linear-gradient(135deg, var(--violet), var(--orchid)); color: #fff; box-shadow: 0 10px 30px rgba(186, 85, 211, 0.4); }
+    .btn-primary:hover { transform: translateY(-2px); color: #fff; box-shadow: 0 14px 36px rgba(186, 85, 211, 0.55); }
+    .btn-ghost { border: 1px solid rgba(255, 255, 255, 0.25); color: #fff; }
+    .btn-ghost:hover { background: rgba(255, 255, 255, 0.08); }
+
+    /* ---------- Layout ---------- */
+    .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px 60px; }
+    .section { margin-bottom: 90px; scroll-margin-top: 80px; }
+    .section-kicker {
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .section-title {
+      font-size: 2.3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+      background: linear-gradient(90deg, #ffffff 0%, var(--thistle) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .section-lead { color: var(--muted); font-size: 1.08rem; max-width: 820px; margin-bottom: 32px; }
+
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* ---------- Stats ---------- */
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .stat {
+      background: var(--glass);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 26px 20px;
+      text-align: center;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      transition: all 0.4s var(--ease);
+    }
+    .stat:hover { transform: translateY(-4px); border-color: rgba(186, 85, 211, 0.3); box-shadow: 0 20px 40px rgba(186, 85, 211, 0.25); }
+    .stat-num {
+      font-size: 2.4rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #fff, var(--orchid));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.1;
+    }
+    .stat-label { font-size: 0.85rem; color: var(--muted); margin-top: 8px; letter-spacing: 0.02em; }
+
+    /* ---------- Cards ---------- */
+    .summary-card, .card, .highlight-card {
+      background: var(--glass);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 35px;
+      transition: all 0.4s var(--ease);
+      position: relative;
+      overflow: hidden;
+    }
+    .summary-card:hover, .highlight-card:hover {
+      transform: translateY(-4px);
+      background: var(--glass-hover);
+      border-color: rgba(186, 85, 211, 0.3);
+      box-shadow: 0 20px 40px rgba(186, 85, 211, 0.3);
+    }
+    .card { border-radius: 20px; padding: 30px; }
+    .card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(147, 112, 219, 0.1) 0%, rgba(186, 85, 211, 0.1) 100%);
+      opacity: 0;
+      transition: opacity 0.4s var(--ease);
+      pointer-events: none;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      background: var(--glass-hover);
+      border-color: rgba(186, 85, 211, 0.3);
+      box-shadow: 0 20px 40px rgba(186, 85, 211, 0.3);
+    }
+    .card:hover::before { opacity: 1; }
+    .card > * { position: relative; z-index: 1; }
+
+    .highlight-card { background: rgba(186, 85, 211, 0.08); border-color: rgba(186, 85, 211, 0.2); }
+
+    .summary-text { font-size: 1.08rem; color: var(--muted); line-height: 1.8; }
+    .summary-text + .summary-text { margin-top: 16px; }
+
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+    .card-letter {
+      width: 44px; height: 44px;
+      border-radius: 14px;
+      display: grid; place-items: center;
+      font-weight: 700; font-size: 1.2rem; color: #fff;
+      background: linear-gradient(135deg, var(--violet), var(--orchid));
+      margin-bottom: 18px;
+      box-shadow: 0 10px 24px rgba(186, 85, 211, 0.35);
+    }
+    .card-title { font-size: 1.3rem; font-weight: 600; color: #fff; margin-bottom: 10px; }
+    .card-subtitle { font-size: 1.02rem; color: var(--orchid); font-weight: 500; margin-bottom: 8px; }
+    .card-meta { font-size: 0.9rem; color: var(--dim); margin-bottom: 18px; }
+    .card-text { color: var(--muted); font-size: 0.97rem; }
+    .outcome {
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      font-size: 0.9rem;
+      color: var(--thistle);
+    }
+    .outcome b { color: var(--gold); font-weight: 600; }
+
+    .achievements { list-style: none; }
+    .achievements li {
+      padding-left: 25px;
+      position: relative;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .achievements li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: var(--orchid);
+      font-weight: bold;
+      font-size: 1.3em;
+      line-height: 1.3;
+    }
+
+    .quote {
+      margin-top: 26px;
+      padding: 22px 28px;
+      border-left: 3px solid var(--gold);
+      background: rgba(242, 184, 75, 0.06);
+      border-radius: 0 16px 16px 0;
+      font-size: 1.15rem;
+      font-style: italic;
+      color: #fff;
+    }
+
+    /* ---------- Profile split ---------- */
+    .split { display: grid; grid-template-columns: 1.6fr 1fr; gap: 24px; align-items: stretch; }
+    .side-panel { display: flex; flex-direction: column; gap: 20px; }
+    .logo-panel {
+      background: #fdfbf5;
+      border-radius: 20px;
+      padding: 22px;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    }
+    .logo-panel img { max-width: 100%; height: auto; display: block; }
+
+    /* ---------- Skill tags ---------- */
+    .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+    .skill-tag {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.88rem;
+      color: var(--muted);
+      transition: all 0.3s var(--ease);
+    }
+    .skill-tag:hover { background: rgba(186, 85, 211, 0.15); border-color: rgba(186, 85, 211, 0.4); transform: translateY(-2px); color: #fff; }
+    .skills-category { margin-bottom: 26px; }
+    .skills-category-title { font-size: 1.1rem; font-weight: 600; color: #fff; margin-bottom: 14px; }
+
+    /* ---------- 5A framework ---------- */
+    .framework { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-bottom: 26px; }
+    .step {
+      background: var(--glass);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 24px 20px;
+      transition: all 0.4s var(--ease);
+      position: relative;
+    }
+    .step:hover { transform: translateY(-6px); border-color: rgba(186, 85, 211, 0.4); box-shadow: 0 20px 40px rgba(186, 85, 211, 0.3); background: var(--glass-hover); }
+    .step-num { font-size: 0.75rem; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 6px; }
+    .step-name { font-size: 1.25rem; font-weight: 700; color: #fff; letter-spacing: 0.04em; }
+    .step-q { color: var(--orchid); font-weight: 500; font-size: 0.95rem; margin: 6px 0 12px; }
+    .step-text { color: var(--muted); font-size: 0.88rem; line-height: 1.6; }
+
+    .rebuild { text-align: center; }
+    .rebuild-title { font-size: 1.15rem; font-weight: 700; letter-spacing: 0.08em; color: #fff; margin-bottom: 10px; }
+    .rebuild .summary-text { max-width: 760px; margin: 0 auto 20px; }
+    .rebuild .skills-grid { justify-content: center; }
+    .rebuild .skill-tag { font-weight: 600; letter-spacing: 0.1em; color: #fff; padding: 10px 20px; }
+
+    /* ---------- Process ---------- */
+    .process { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin-bottom: 30px; counter-reset: p; }
+    .process-step { position: relative; padding: 0 12px; text-align: center; }
+    .process-step::after {
+      content: '';
+      position: absolute;
+      top: 27px;
+      left: calc(50% + 34px);
+      right: calc(-50% + 34px);
+      height: 2px;
+      background: linear-gradient(90deg, var(--orchid), rgba(186, 85, 211, 0.2));
+    }
+    .process-step:last-child::after { display: none; }
+    .process-dot {
+      width: 56px; height: 56px;
+      margin: 0 auto 14px;
+      border-radius: 50%;
+      display: grid; place-items: center;
+      font-weight: 700; font-size: 1.2rem; color: #fff;
+      background: linear-gradient(135deg, var(--violet), var(--orchid));
+      box-shadow: 0 10px 26px rgba(186, 85, 211, 0.45);
+    }
+    .process-name { font-weight: 700; color: #fff; font-size: 0.95rem; letter-spacing: 0.05em; margin-bottom: 6px; }
+    .process-text { color: var(--muted); font-size: 0.86rem; line-height: 1.55; }
+
+    .formats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 10px; }
+    .format-title { font-weight: 700; color: #fff; letter-spacing: 0.04em; margin-bottom: 8px; font-size: 1rem; }
+    .small-note { color: var(--dim); font-size: 0.9rem; margin-top: 18px; }
+
+    /* ---------- Programmes ---------- */
+    .prog-num { font-size: 2rem; font-weight: 700; color: rgba(186, 85, 211, 0.55); line-height: 1; margin-bottom: 14px; }
+    .prog-area {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid rgba(242, 184, 75, 0.35);
+      border-radius: 999px;
+      padding: 3px 10px;
+      margin-bottom: 12px;
+    }
+
+    /* ---------- Journey timeline ---------- */
+    .journey { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 34px; }
+    .journey .skill-tag { color: #fff; }
+    .journey .arrow { color: var(--orchid); font-weight: 700; }
+
+    .timeline { position: relative; padding-left: 30px; }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 7px; top: 8px; bottom: 8px;
+      width: 2px;
+      background: linear-gradient(180deg, var(--orchid), rgba(147, 112, 219, 0.15));
+    }
+    .tl-item { position: relative; margin-bottom: 20px; }
+    .tl-item::before {
+      content: '';
+      position: absolute;
+      left: -29px; top: 34px;
+      width: 14px; height: 14px;
+      border-radius: 50%;
+      background: var(--orchid);
+      box-shadow: 0 0 0 4px rgba(186, 85, 211, 0.25);
+    }
+    .tl-head { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: baseline; }
+    .tl-date { color: var(--gold); font-size: 0.88rem; white-space: nowrap; font-weight: 500; }
+
+    /* ---------- Glass box ---------- */
+    .glassbox { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .glassbox h3 { font-size: 1.4rem; color: #fff; margin-bottom: 12px; }
+
+    /* ---------- Credentials ---------- */
+    .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-bottom: 25px; }
+    .cert-item {
+      background: var(--glass);
+      border: 1px solid var(--line);
+      padding: 16px 20px;
+      border-radius: 14px;
+      transition: all 0.3s var(--ease);
+    }
+    .cert-item:hover { background: rgba(186, 85, 211, 0.1); border-color: rgba(186, 85, 211, 0.3); transform: translateY(-2px); }
+    .cert-name { color: #fff; font-weight: 600; font-size: 0.98rem; }
+    .cert-detail { color: var(--dim); font-size: 0.87rem; margin-top: 2px; }
+    .cert-category-title { font-size: 1.05rem; font-weight: 600; color: var(--orchid); margin: 28px 0 14px; }
+
+    /* ---------- Contact ---------- */
+    .stages { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 28px; }
+    .stage-label { font-size: 0.78rem; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 10px; }
+    .stage-quote { color: #fff; font-size: 1.08rem; font-style: italic; line-height: 1.55; }
+
+    .contact-card { display: grid; grid-template-columns: auto 1fr; gap: 30px; align-items: center; }
+    .contact-card .profile-img { width: 140px; height: 140px; margin: 0; }
+    .contact-lines { margin: 14px 0 18px; display: grid; gap: 6px; }
+    .contact-lines div { color: var(--muted); }
+    .contact-lines span { display: inline-block; min-width: 92px; font-size: 0.78rem; letter-spacing: 0.15em; color: var(--dim); }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px 50px;
+      color: var(--dim);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--line);
+    }
+    footer .fw { letter-spacing: 0.25em; text-transform: uppercase; color: var(--thistle); margin-bottom: 8px; font-size: 0.8rem; }
+
+    /* ---------- Brand marks ---------- */
+    .nav-brand { display: flex; align-items: center; gap: 10px; }
+    .nav-brand img { height: 30px; width: auto; display: block; }
+    .hero-logo { width: 380px; max-width: 86%; height: auto; display: block; margin: 0 auto 30px; animation: fadeInUp 1s ease-out 0.1s both; }
+    .section-kicker { display: flex; align-items: center; gap: 10px; }
+    .section-kicker::before {
+      content: ''; width: 22px; height: 20px; flex: none;
+      background: url('assets/insignia-light.png') center / contain no-repeat;
+      opacity: 0.9;
+    }
+    .insignia-card { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 14px; }
+    .insignia-card img { width: 110px; height: auto; filter: drop-shadow(0 10px 30px rgba(186, 85, 211, 0.45)); }
+    .insignia-card .logo-full { width: 100%; max-width: 300px; filter: none; }
+    .watermark { position: absolute; right: -40px; bottom: -40px; width: 260px; opacity: 0.06; pointer-events: none; }
+    .btn-wa { background: #25d366; color: #0b3d1f; box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3); }
+    .btn-wa:hover { color: #0b3d1f; transform: translateY(-2px); box-shadow: 0 14px 36px rgba(37, 211, 102, 0.45); }
+    .footer-brand { display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 14px; }
+    .footer-brand img { height: 46px; width: auto; }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 1000px) {
+      .framework { grid-template-columns: repeat(2, 1fr); }
+      .framework .step:last-child { grid-column: 1 / -1; }
+      .formats { grid-template-columns: repeat(2, 1fr); }
+      .grid-3 { grid-template-columns: repeat(2, 1fr); }
+      .process { grid-template-columns: 1fr; gap: 18px; }
+      .process-step { display: grid; grid-template-columns: 56px 1fr; gap: 16px; text-align: left; align-items: start; }
+      .process-step::after { display: none; }
+      .process-dot { margin: 0; }
+    }
+    @media (max-width: 768px) {
+      .nav-brand span { display: none; }
+      .nav-brand img { height: 26px; }
+      .hero-logo { width: 280px; }
+      .nav-links { margin-left: 0; }
+      .hero-section { min-height: auto; padding: 40px 16px; }
+      .profile-img { width: 130px; height: 130px; }
+      .name { font-size: 2.2rem; line-height: 1.2; }
+      .mantra { font-size: 1.2rem; }
+      .tagline, .role { font-size: 1rem; }
+      .contact-info { flex-direction: column; gap: 8px; }
+      .container { padding: 30px 16px 40px; }
+      .section { margin-bottom: 60px; }
+      .section-title { font-size: 1.7rem; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .stat-num { font-size: 1.9rem; }
+      .split, .glassbox, .stages, .grid-3, .formats { grid-template-columns: 1fr; }
+      .framework { grid-template-columns: 1fr; }
+      .cards-grid { grid-template-columns: 1fr; }
+      .summary-card, .card, .highlight-card { padding: 24px 20px; border-radius: 18px; }
+      .contact-card { grid-template-columns: 1fr; text-align: center; }
+      .contact-card .profile-img { margin: 0 auto; }
+      .contact-lines span { min-width: 0; margin-right: 8px; }
+      .timeline { padding-left: 24px; }
+      .tl-item::before { left: -23px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+    @media print {
+      body { background: white; color: black; animation: none; }
+      body::before, .nav, .cta-row { display: none; }
+      .card, .summary-card, .highlight-card, .step, .stat, .cert-item {
+        background: #f5f5f7; border: 1px solid #d1d1d6; box-shadow: none;
+        print-color-adjust: exact; -webkit-print-color-adjust: exact;
+      }
+      .reveal { opacity: 1; transform: none; }
+      .achievements li, .summary-text, .card-text, .step-text { color: #333; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="#top"><img src="assets/insignia-light.png" alt="Metanoia insignia"><span>Metanoia Mindcraft</span></a>
+      <div class="nav-links">
+        <a href="#profile">Profile</a>
+        <a href="#what-we-do">What We Do</a>
+        <a href="#philosophy">5A Framework</a>
+        <a href="#approach">Approach</a>
+        <a href="#programmes">Programmes</a>
+        <a href="#experience">Experience</a>
+        <a href="#credentials">Credentials</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero-section" id="top">
+    <div class="profile-container">
+      <img class="hero-logo" src="assets/metanoia-logo-light.png" alt="Metanoia Mindcraft Consultants — Awareness to Ascension">
+      <div class="profile-img"><img src="assets/asha-photo.jpg" alt="Portrait of Asha C. Devi"></div>
+      <h1 class="name">Asha C. Devi</h1>
+      <p class="role">Founder &amp; Lead Consultant</p>
+      <p class="tagline">Corporate Trainer · People Development Professional</p>
+      <p class="mantra">Understand yourself. <span>Build what you need.</span> Become what's next.</p>
+      <p class="hero-intro">Practical learning and development interventions that help individuals build self-awareness, strengthen workplace skills and prepare for greater responsibility.</p>
+      <div class="contact-info">
+        <span class="contact-item">📧 <a href="mailto:ashasingh.c@gmail.com">ashasingh.c@gmail.com</a></span>
+        <span class="contact-item">📱 <a href="tel:+919885099918">+91 98850 99918</a></span>
+        <span class="contact-item">💬 <a href="https://wa.me/919885099918?text=Hello%20Asha%2C%20I%27d%20like%20to%20discuss%20a%20training%20requirement." target="_blank" rel="noopener">WhatsApp</a></span>
+        <span class="contact-item">📍 Hyderabad, India</span>
+        <span class="contact-item">🔗 <a href="https://www.linkedin.com/in/ashacdevi" target="_blank" rel="noopener">linkedin.com/in/ashacdevi</a></span>
+      </div>
+      <div class="badges">
+        <span class="achievement-badge">🎓 Leadership Development</span>
+        <span class="achievement-badge">💬 Workplace Communication</span>
+        <span class="achievement-badge">🚀 Capability Development</span>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#contact">Let's talk</a>
+        <a class="btn btn-wa" href="https://wa.me/919885099918?text=Hello%20Asha%2C%20I%27d%20like%20to%20discuss%20a%20training%20requirement." target="_blank" rel="noopener">WhatsApp me</a>
+        <a class="btn btn-ghost" href="#programmes">View programmes</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Stats -->
+    <section class="section reveal" aria-label="Key figures">
+      <div class="stats">
+        <div class="stat"><div class="stat-num">10,000+</div><div class="stat-label">Training, coaching &amp; facilitation hours</div></div>
+        <div class="stat"><div class="stat-num">800+</div><div class="stat-label">Professionals trained</div></div>
+        <div class="stat"><div class="stat-num">15+</div><div class="stat-label">Years in training &amp; people development</div></div>
+        <div class="stat"><div class="stat-num">20+</div><div class="stat-label">Years of corporate experience</div></div>
+      </div>
+    </section>
+
+    <!-- 01 Profile -->
+    <section class="section reveal" id="profile">
+      <div class="section-kicker">01 · Profile</div>
+      <h2 class="section-title">From teaching technology to developing people</h2>
+      <div class="split">
+        <div class="summary-card">
+          <p class="summary-text">My journey as a trainer began before I formally held the title of a trainer. At <strong>Hutchison Essar</strong>, as the SPOC for UMS and Roaming Services, I conducted teach-back sessions to help colleagues understand how the technology worked. That taught me a lesson I still carry: <strong>knowing something is very different from being able to help someone else understand it.</strong></p>
+          <p class="summary-text">My career moved through independent training assignments, quality and operations roles, and into a formal <strong>Capability Development Trainer</strong> role at <strong>IBM</strong>, where I designed and delivered programmes in communication, language, accent neutralisation, professional and email etiquette, and customer experience.</p>
+          <p class="summary-text">Training did not stop when I moved out of a trainer designation. It continued through my roles in PMO, change management, workload management, operations and people leadership. Across these roles I became increasingly interested in why people struggle to apply what they know, what prevents them from progressing, and how organisations can support meaningful capability development.</p>
+          <p class="summary-text">Today I bring together my corporate experience and training background to create practical learning experiences that connect personal development with workplace application.</p>
+        </div>
+        <div class="side-panel">
+          <div class="card insignia-card">
+            <img src="assets/insignia-light.png" alt="Metanoia lotus insignia">
+            <img class="logo-full" src="assets/metanoia-logo-light.png" alt="Metanoia Mindcraft Consultants — Awareness to Ascension">
+          </div>
+          <div class="card">
+            <div class="card-title">Industries &amp; Environments</div>
+            <div class="skills-grid">
+              <span class="skill-tag">Telecom</span><span class="skill-tag">IT</span><span class="skill-tag">Healthcare</span>
+              <span class="skill-tag">KPO &amp; Shared Services</span><span class="skill-tag">Customer Experience</span>
+              <span class="skill-tag">Operations</span><span class="skill-tag">Technology</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="quote">“I understand the person in the classroom — but I also understand the organisation they have to return to.”</div>
+    </section>
+
+    <!-- 02 What we do -->
+    <section class="section reveal" id="what-we-do">
+      <div class="section-kicker">02 · What We Do</div>
+      <h2 class="section-title">Three core areas, one integrated approach</h2>
+      <p class="section-lead">Metanoia Mindcraft Consultants works with organisations and professionals to address capability gaps through structured learning, practical application and development-focused interventions.</p>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-letter">A</div>
+          <div class="card-title">Manager Effectiveness &amp; Leadership Development</div>
+          <p class="card-text" style="margin-bottom:16px">Helping managers move from individual contribution to effective people leadership.</p>
+          <ul class="achievements">
+            <li>First-Time Manager Development</li>
+            <li>Leadership Effectiveness</li>
+            <li>Delegation and Accountability</li>
+            <li>Coaching and Mentoring</li>
+            <li>Feedback and Performance Conversations</li>
+            <li>Conflict Management</li>
+            <li>Talent and Capability Development</li>
+            <li>Women and Leadership</li>
+          </ul>
+          <div class="outcome"><b>Outcomes:</b> Greater clarity in managerial responsibilities, more effective workplace conversations, stronger delegation and better awareness of people-development responsibilities.</div>
+        </div>
+        <div class="card">
+          <div class="card-letter">B</div>
+          <div class="card-title">Workplace Communication &amp; Influence</div>
+          <p class="card-text" style="margin-bottom:16px">Helping professionals communicate with clarity, confidence and purpose.</p>
+          <ul class="achievements">
+            <li>Effective Business Communication</li>
+            <li>Professional and Workplace Etiquette</li>
+            <li>Difficult Conversations</li>
+            <li>Presentation Skills and Executive Presence</li>
+            <li>Impromptu Speaking</li>
+            <li>Business Storytelling</li>
+            <li>Negotiation and Stakeholder Influence</li>
+            <li>Email Etiquette</li>
+            <li>Customer Service Communication</li>
+            <li>Language and Accent Neutralisation</li>
+          </ul>
+          <div class="outcome"><b>Outcomes:</b> Clearer communication, more structured presentations, improved listening and the ability to handle workplace interactions more effectively.</div>
+        </div>
+        <div class="card">
+          <div class="card-letter">C</div>
+          <div class="card-title">Career &amp; Capability Development</div>
+          <p class="card-text" style="margin-bottom:16px">Helping individuals understand their strengths, identify development gaps and prepare for future opportunities.</p>
+          <ul class="achievements">
+            <li>Self-Awareness and Emotional Intelligence</li>
+            <li>Career Planning and Progression</li>
+            <li>Interview Preparation</li>
+            <li>Workplace Readiness</li>
+            <li>Learning Agility</li>
+            <li>Personal Effectiveness</li>
+            <li>Confidence and Professional Visibility</li>
+            <li>Women and Career Choices</li>
+          </ul>
+          <div class="outcome"><b>Outcomes:</b> Better understanding of development needs, clearer career goals, practical development plans and greater ownership of professional growth.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 Philosophy -->
+    <section class="section reveal" id="philosophy">
+      <div class="section-kicker">03 · Our Development Philosophy</div>
+      <h2 class="section-title">The 5A Framework — inside-out development</h2>
+      <p class="section-lead">Sustainable development begins with awareness and continues through practice, reflection and action. Before adding another skill, framework or behaviour, we need to understand the foundation that is already there.</p>
+      <div class="framework">
+        <div class="step"><div class="step-num">STEP 1</div><div class="step-name">AWARE</div><div class="step-q">Where am I?</div><p class="step-text">Understand current strengths, behaviours and development needs — what you do well, what limits you, and how others perceive you.</p></div>
+        <div class="step"><div class="step-num">STEP 2</div><div class="step-name">AWAKEN</div><div class="step-q">Where do I want to go?</div><p class="step-text">Recognise new possibilities and why change matters. Get clear on the destination, what it requires, and the gap between today and tomorrow.</p></div>
+        <div class="step"><div class="step-num">STEP 3</div><div class="step-name">APPLY</div><div class="step-q">What do I need for the journey?</div><p class="step-text">Practise new skills and behaviours in relevant situations. Close the gap through learning, practice, exposure and real work application.</p></div>
+        <div class="step"><div class="step-num">STEP 4</div><div class="step-name">ASSESS</div><div class="step-q">Am I actually moving?</div><p class="step-text">Reflect on progress, review application and identify further gaps. Measure behaviour and results, then recalibrate.</p></div>
+        <div class="step"><div class="step-num">STEP 5</div><div class="step-name">ASCEND</div><div class="step-q">Have I reached the next stage?</div><p class="step-text">Build on learning and prepare for the next stage. Make change sustainable — every destination becomes a new starting point.</p></div>
+      </div>
+      <div class="highlight-card rebuild">
+        <img class="watermark" src="assets/insignia-light.png" alt="">
+        <div class="rebuild-title">NOT A 180° TRANSFORMATION. A SMARTER REBUILD.</div>
+        <p class="summary-text">The objective is not to change everything about a person. It is to understand what already works, identify what is missing and determine what needs to be:</p>
+        <div class="skills-grid">
+          <span class="skill-tag">ADDED</span><span class="skill-tag">STRENGTHENED</span><span class="skill-tag">ADAPTED</span><span class="skill-tag">REMOVED</span><span class="skill-tag">REARRANGED</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 Approach -->
+    <section class="section reveal" id="approach">
+      <div class="section-kicker">04 · Our Approach to Organisational Learning</div>
+      <h2 class="section-title">Start with the problem, not a catalogue</h2>
+      <p class="section-lead">Not every workplace problem can be solved by delivering a training session. Our approach begins by understanding the problem before recommending an intervention.</p>
+      <div class="process">
+        <div class="process-step"><div class="process-dot">1</div><div><div class="process-name">IDENTIFY</div><p class="process-text">Understand the workplace challenge and the desired outcome. What is actually happening?</p></div></div>
+        <div class="process-step"><div class="process-dot">2</div><div><div class="process-name">DIAGNOSE</div><p class="process-text">Why is it happening? Is the gap knowledge, skill, behaviour, mindset, process, leadership or communication?</p></div></div>
+        <div class="process-step"><div class="process-dot">3</div><div><div class="process-name">DESIGN</div><p class="process-text">Develop a suitable learning intervention based on the identified need.</p></div></div>
+        <div class="process-step"><div class="process-dot">4</div><div><div class="process-name">DELIVER</div><p class="process-text">Facilitate practical learning through discussion, exercises, workplace scenarios and application.</p></div></div>
+        <div class="process-step"><div class="process-dot">5</div><div><div class="process-name">REASSESS</div><p class="process-text">Review learning, application and progress. What was applied, what worked, what still needs attention?</p></div></div>
+      </div>
+      <div class="summary-card" style="margin-bottom:24px">
+        <p class="summary-text">Where appropriate, this can include <strong>Training Needs Analysis</strong>, customised learning design, participant workbooks and post-programme evaluation. The aim is to make learning relevant to the workplace rather than treating training as an isolated event.</p>
+      </div>
+      <h3 class="skills-category-title">Delivery formats</h3>
+      <div class="formats">
+        <div class="card"><div class="format-title">Self-Paced</div><p class="card-text">Structured learning to revisit and apply concepts at your own pace.</p></div>
+        <div class="card"><div class="format-title">Online, Instructor-Led</div><p class="card-text">Live, interactive sessions with discussion, activities and cases.</p></div>
+        <div class="card"><div class="format-title">Classroom, In-Person</div><p class="card-text">Workshops and masterclasses with hands-on practice.</p></div>
+        <div class="card"><div class="format-title">Customised Corporate</div><p class="card-text">Interventions designed around a specific organisational challenge.</p></div>
+      </div>
+      <p class="small-note">Workshops · Masterclasses · Learning journeys · 1:1 and group coaching · Train-the-trainer · Blended programmes</p>
+    </section>
+
+    <!-- 05 Programmes -->
+    <section class="section reveal" id="programmes">
+      <div class="section-kicker">05 · Signature Programmes</div>
+      <h2 class="section-title">Recognisable programme families</h2>
+      <p class="section-lead">Each programme maps to one of the three core areas and can run as a workshop, a learning journey or part of a customised intervention.</p>
+      <div class="grid-3">
+        <div class="card"><div class="prog-num">01</div><span class="prog-area">Leadership</span><div class="card-title">The First-Time Manager</div><p class="card-text">From individual contributor to people leader — delegation, feedback, accountability and performance conversations.</p></div>
+        <div class="card"><div class="prog-num">02</div><span class="prog-area">Leadership</span><div class="card-title">Leadership That Works</div><p class="card-text">Practical leadership capability in people development, coaching, communication, influence and team effectiveness.</p></div>
+        <div class="card"><div class="prog-num">03</div><span class="prog-area">Communication</span><div class="card-title">Communicate With Impact</div><p class="card-text">From sharing information to creating understanding and influence — clarity, listening and professional communication.</p></div>
+        <div class="card"><div class="prog-num">04</div><span class="prog-area">Communication</span><div class="card-title">Speak With Confidence</div><p class="card-text">Structured speaking, articulation, impromptu responses and presentation confidence.</p></div>
+        <div class="card"><div class="prog-num">05</div><span class="prog-area">Career</span><div class="card-title">Career by Design</div><p class="card-text">Understand your current position, identify capability gaps and build a practical development plan.</p></div>
+        <div class="card"><div class="prog-num">06</div><span class="prog-area">Career</span><div class="card-title">Interview Ready</div><p class="card-text">Structure responses, communicate experience clearly and respond thoughtfully — rather than memorise answers.</p></div>
+        <div class="card"><div class="prog-num">07</div><span class="prog-area">Communication</span><div class="card-title">Storytelling for Business</div><p class="card-text">Structured stories that communicate ideas and make presentations memorable and persuasive.</p></div>
+        <div class="card"><div class="prog-num">08</div><span class="prog-area">Career</span><div class="card-title">Emotional Intelligence at Work</div><p class="card-text">Self-awareness, empathy and a better understanding of how behaviour influences workplace relationships.</p></div>
+        <div class="card"><div class="prog-num">09</div><span class="prog-area">Career</span><div class="card-title">Women &amp; the Career Choices We Don't Question</div><p class="card-text">Assumptions, biases, visibility and the choices that quietly shape women's professional development.</p></div>
+      </div>
+      <p class="small-note">Programme content, duration and delivery format are adapted to the audience and the identified learning need.</p>
+    </section>
+
+    <!-- 06 Experience -->
+    <section class="section reveal" id="experience">
+      <div class="section-kicker">06 · The Experience Behind the Training</div>
+      <h2 class="section-title">Where the experience comes from</h2>
+      <p class="section-lead">At IBM, my experience included capability development training, team leadership, change programmes and operational delivery. At Foundever, I worked across operational reporting and analytics, people leadership, performance frameworks and operational standardisation. That lets me approach development from two perspectives: the individual who needs to learn, and the organisation in which that learning must be applied.</p>
+
+      <h3 class="skills-category-title">Career journey</h3>
+      <div class="journey">
+        <span class="skill-tag">Trainer</span><span class="arrow">→</span>
+        <span class="skill-tag">Quality Professional</span><span class="arrow">→</span>
+        <span class="skill-tag">PMO Professional</span><span class="arrow">→</span>
+        <span class="skill-tag">Change Management</span><span class="arrow">→</span>
+        <span class="skill-tag">Workload &amp; Operations Leader</span><span class="arrow">→</span>
+        <span class="skill-tag">People Leader</span><span class="arrow">→</span>
+        <span class="skill-tag">Capability Builder</span>
+      </div>
+
+      <div class="highlight-card" style="margin-bottom:34px">
+        <div class="card-title">People-development results from my corporate career</div>
+        <ul class="achievements">
+          <li><strong>Talent mobility:</strong> Built structured development plans that moved all 7 direct reports into vertical promotions or leadership roles.</li>
+          <li><strong>Upskilling:</strong> Built a Power BI upskilling pathway with minimal training spend and moved 10 team members into Power BI roles.</li>
+          <li><strong>Retention:</strong> Reduced team attrition from 5 departures a year to 1 or fewer (~80%) through coaching, career pathing, emotional-safety practices and clear performance metrics.</li>
+          <li><strong>Faster readiness:</strong> Cut transition cycle time from 45+ days to under 10 working days (~78%) and onboarding-to-production from 5 weeks to 2.5 weeks, using skill-gap analysis and competency building.</li>
+        </ul>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item card">
+          <div class="tl-head"><div class="card-title">Founder &amp; Lead Consultant</div><div class="tl-date">Mar 2026 – Present</div></div>
+          <div class="card-subtitle">Metanoia Mindcraft Consultants · Transformation &amp; Capability Consulting</div>
+          <ul class="achievements">
+            <li>Advise professionals and early-stage businesses on capability gaps, process gaps and growth priorities, converting findings into structured development plans.</li>
+            <li>Apply skill-gap assessment and competency frameworks to design targeted capability-building and career-transition roadmaps.</li>
+          </ul>
+        </div>
+        <div class="tl-item card">
+          <div class="tl-head"><div class="card-title">Senior Manager – Operations, Reporting &amp; Analytics</div><div class="tl-date">Apr 2022 – Jan 2026</div></div>
+          <div class="card-subtitle">Foundever (formerly Sitel Group)</div>
+          <ul class="achievements">
+            <li>Led a global shared-services function of 60+ professionals across 4 locations — accountable for delivery, people, capacity and capability.</li>
+            <li>Governed the Sitel–Sykes reporting integration with zero client escalations; designed a cross-functional onboarding-to-production framework (5 weeks → 2.5 weeks).</li>
+            <li>Created KPI/KRA frameworks using skills-to-task and work-complexity mapping, measuring output beyond volume alone.</li>
+          </ul>
+        </div>
+        <div class="tl-item card">
+          <div class="tl-head"><div class="card-title">Manager – Operations, Reporting &amp; Analytics</div><div class="tl-date">Feb 2016 – Apr 2022</div></div>
+          <div class="card-subtitle">Sitel India Pvt. Ltd. (now Foundever)</div>
+          <ul class="achievements">
+            <li>Led two global analyst teams; coached all 7 direct reports into promotions or leadership roles and cut attrition by ~80%.</li>
+            <li>Created SOPs, operating handbooks and reporting templates that reduced process variation across teams and geographies.</li>
+          </ul>
+        </div>
+        <div class="tl-item card">
+          <div class="tl-head"><div class="card-title">Workload Manager · Project Coordinator · PMO Analyst</div><div class="tl-date">Jul 2011 – Feb 2016</div></div>
+          <div class="card-subtitle">IBM India Pvt. Ltd.</div>
+          <ul class="achievements">
+            <li>Managed workload and capacity for 88 resources with zero bench time; led a 22-person team through 1,600 technical changes, 30% above a 60-person benchmark.</li>
+            <li>Coordinated 300+ complex technical changes at a 100% success rate; ran reporting and dashboards for a 700-member division.</li>
+          </ul>
+        </div>
+        <div class="tl-item card">
+          <div class="tl-head"><div class="card-title">Capability Development Trainer</div><div class="tl-date">Aug 2009 – Jul 2011</div></div>
+          <div class="card-subtitle">IBM India Pvt. Ltd.</div>
+          <ul class="achievements">
+            <li>Designed and delivered client-tailored training in business communication, soft skills, accent neutralisation and professional etiquette.</li>
+            <li>Ran calibration sessions to keep assessment standards consistent.</li>
+          </ul>
+        </div>
+        <div class="tl-item card">
+          <div class="tl-head"><div class="card-title">Earlier Career</div><div class="tl-date">2002 – 2008</div></div>
+          <ul class="achievements">
+            <li>Freelance Trainer — ValueStream Inc. and Mind Trainers (2007–2008)</li>
+            <li>Senior Executive, Quality — Apollo Health Street (2006–2007)</li>
+            <li>Processing Executive — HSBC (2003–2006)</li>
+            <li>Operations Executive — Hutchison Essar (2002–2003)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Glass box -->
+    <section class="section reveal" aria-label="The Glass Box">
+      <div class="section-kicker">The Glass Box</div>
+      <div class="glassbox">
+        <div class="summary-card">
+          <h3>Watching the career ladder from inside a glass box.</h3>
+          <p class="summary-text">The opportunities are visible. The next role is visible. Others are progressing. Yet something prevents people from moving: a lack of self-awareness, an unclear picture of what the next level requires, or gaps that surface after the promotion.</p>
+        </div>
+        <div class="highlight-card" style="display:flex;align-items:center">
+          <p class="summary-text" style="font-size:1.2rem;color:#fff">Career progression is not simply about being given an opportunity. It is about being <strong style="color:var(--orchid)">aware</strong> enough to recognise it, <strong style="color:var(--orchid)">prepared</strong> enough to take it, and <strong style="color:var(--orchid)">open</strong> enough to continue learning once you get there.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 Credentials -->
+    <section class="section reveal" id="credentials">
+      <div class="section-kicker">07 · Credentials &amp; Organisations</div>
+      <h2 class="section-title">Qualifications and associations</h2>
+
+      <div class="cert-category-title">Certifications</div>
+      <div class="cert-grid">
+        <div class="cert-item"><div class="cert-name">Emotional Intelligence</div><div class="cert-detail">Certified · Train-the-Trainer</div></div>
+        <div class="cert-item"><div class="cert-name">LCTW Train-the-Trainer</div><div class="cert-detail">Certified</div></div>
+        <div class="cert-item"><div class="cert-name">Take the Stage</div><div class="cert-detail">Women's Leadership Programme, IBM</div></div>
+        <div class="cert-item"><div class="cert-name">PRINCE2®</div><div class="cert-detail">Certified</div></div>
+        <div class="cert-item"><div class="cert-name">Lean Process Improvement</div><div class="cert-detail">Certified</div></div>
+        <div class="cert-item"><div class="cert-name">ITIL Framework</div><div class="cert-detail">Foundation training, IBM</div></div>
+        <div class="cert-item"><div class="cert-name">7 Habits of Highly Effective People</div><div class="cert-detail">Stephen Covey</div></div>
+        <div class="cert-item"><div class="cert-name">AI Accelerator Programme</div><div class="cert-detail">Outskill</div></div>
+      </div>
+
+      <div class="cert-category-title">Education</div>
+      <div class="cert-grid">
+        <div class="cert-item"><div class="cert-name">Executive PG Certificate</div><div class="cert-detail">Product Management, IIM Ranchi</div></div>
+        <div class="cert-item"><div class="cert-name">Bachelor of Commerce</div><div class="cert-detail">Osmania University</div></div>
+        <div class="cert-item"><div class="cert-name">Leadership Management Programme</div><div class="cert-detail">TMC</div></div>
+      </div>
+
+      <div class="skills-category">
+        <div class="cert-category-title">Additional training &amp; tools</div>
+        <div class="skills-grid">
+          <span class="skill-tag">Generative AI</span><span class="skill-tag">Prompt Engineering</span><span class="skill-tag">AI Workflow Automation</span>
+          <span class="skill-tag">Power BI</span><span class="skill-tag">MS Project</span><span class="skill-tag">Jira</span>
+          <span class="skill-tag">Training Needs Analysis</span><span class="skill-tag">Competency Frameworks</span>
+        </div>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-title">Corporate Experience</div>
+          <div class="skills-grid">
+            <span class="skill-tag">IBM</span><span class="skill-tag">Foundever / Sitel Group</span><span class="skill-tag">HSBC</span>
+            <span class="skill-tag">Apollo Health Street</span><span class="skill-tag">Hutchison Essar</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">Training Engagements &amp; Associations</div>
+          <div class="skills-grid">
+            <span class="skill-tag">ValueStream</span><span class="skill-tag">Mind Trainers</span><span class="skill-tag">Goldstone Technologies</span>
+            <span class="skill-tag">CFCI</span><span class="skill-tag">Nipuna / Tech Mahindra</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 Contact -->
+    <section class="section reveal" id="contact">
+      <div class="section-kicker">08 · Let's Talk</div>
+      <h2 class="section-title">Build awareness. Build capability. Improve performance.</h2>
+      <p class="section-lead">If your organisation is looking to strengthen managerial effectiveness, improve workplace communication or address capability gaps, let's discuss the learning need and identify a suitable approach.</p>
+      <div class="stages">
+        <div class="card"><div class="stage-label">FIRST</div><p class="stage-quote">“I understand something about myself now that I didn't understand before.”</p></div>
+        <div class="card"><div class="stage-label">THEN</div><p class="stage-quote">“I know what I need to do differently.”</p></div>
+        <div class="card"><div class="stage-label">EVENTUALLY</div><p class="stage-quote">“I can figure out what comes next.”</p></div>
+      </div>
+      <div class="quote" style="margin:0 0 28px">The real measure of learning is not what happens during the training. It is what happens after it.</div>
+
+      <div class="highlight-card contact-card">
+        <img class="watermark" src="assets/insignia-light.png" alt="">
+        <div class="profile-img"><img src="assets/asha-photo.jpg" alt="Asha C. Devi"></div>
+        <div>
+          <div class="card-title" style="font-size:1.6rem;margin-bottom:2px">Asha C. Devi</div>
+          <div class="card-subtitle">Founder &amp; Lead Consultant · Metanoia Mindcraft Consultants</div>
+          <div class="contact-lines">
+            <div><span>EMAIL</span><a href="mailto:ashasingh.c@gmail.com">ashasingh.c@gmail.com</a></div>
+            <div><span>MOBILE</span><a href="tel:+919885099918">+91 98850 99918</a></div>
+            <div><span>WHATSAPP</span><a href="https://wa.me/919885099918?text=Hello%20Asha%2C%20I%27d%20like%20to%20discuss%20a%20training%20requirement." target="_blank" rel="noopener">+91 98850 99918</a></div>
+            <div><span>LINKEDIN</span><a href="https://www.linkedin.com/in/ashacdevi" target="_blank" rel="noopener">linkedin.com/in/ashacdevi</a></div>
+            <div><span>LOCATION</span>Hyderabad, India</div>
+          </div>
+          <div class="card-meta" style="margin-bottom:10px">Available for</div>
+          <div class="skills-grid">
+            <span class="skill-tag">Corporate training</span><span class="skill-tag">Leadership development</span><span class="skill-tag">Workshops</span>
+            <span class="skill-tag">Masterclasses</span><span class="skill-tag">Instructor-led programmes</span><span class="skill-tag">Self-paced learning</span>
+            <span class="skill-tag">Customised interventions</span>
+          </div>
+          <div class="cta-row" style="justify-content:flex-start">
+            <a class="btn btn-primary" href="mailto:ashasingh.c@gmail.com?subject=Training%20enquiry">Email Asha</a>
+            <a class="btn btn-wa" href="https://wa.me/919885099918?text=Hello%20Asha%2C%20I%27d%20like%20to%20discuss%20a%20training%20requirement." target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn-ghost" href="tel:+919885099918">Call</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/ashacdevi" target="_blank" rel="noopener">Connect on LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><img src="assets/metanoia-logo-light.png" alt="Metanoia Mindcraft Consultants"></div>
+    <div class="fw">Aware · Awaken · Apply · Assess · Ascend</div>
+    © 2026 Asha C. Devi · Metanoia Mindcraft Consultants · <a href="tel:+919885099918">+91 98850 99918</a>
+  </footer>
+
+  <script>
+    (function () {
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(function (el) { el.classList.add('visible'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.08 });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</body>
+</html>
